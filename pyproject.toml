@@ -1,9 +1,9 @@
 [project]
 name = "resource-monitor-py"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.1.1"
+description = "college graduation project"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.10"
 dependencies = [
     "psutil>=7.2.2",
     "rich>=15.0.0",
