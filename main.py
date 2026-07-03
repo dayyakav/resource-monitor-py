@@ -1,10 +1,6 @@
-import os
-import sys
-import time
+import os, sys, time, rich
+import logger
 
-import rich
-
-import setup
 from utils import get_cpu_info, get_mem_info, get_net_info, get_processes
 
 # main loop
