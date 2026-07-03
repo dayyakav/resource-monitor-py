@@ -2,7 +2,7 @@
 
 ### The only reason this project exists is my college graduation project. Please don't tell me anything about code quality..
 
-Simple CLI resource monitor written in Python using psutil.
+Simple CLI resource monitor written in Python using psutil + rich.
 
 # Screenshots
 ![Screenshot](screenshot.png)
