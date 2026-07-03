@@ -9,12 +9,12 @@ while True:
     mem_info = get_mem_info()
     net_info = get_net_info()
 
-    # If os windows or linux - clear terminal
-    os.system("cls" if os.name == "nt" else "clear")
-
     try:
-        # Configurable process count to display
+        # Configurable process count
         processes = get_processes(count=7)
+
+        # If os is windows or linux - clear terminal
+        os.system("cls" if os.name == "nt" else "clear")
 
         # Displayed info
         rich.print(cpu_info)
@@ -23,5 +23,7 @@ while True:
         print("")
         for item in processes:
             rich.print(item)
+
+    # I know it's bad idea
     except Exception as e:
-        logging.error(e) # I know it's bad idea
+        logging.error(e)
