@@ -1,4 +1,4 @@
-import os, sys, time, rich
+import os, sys, time, rich, logging
 import logger
 
 from utils import get_cpu_info, get_mem_info, get_net_info, get_processes
