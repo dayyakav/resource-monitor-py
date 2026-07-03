@@ -1,4 +1,4 @@
-## Simple Resource Monitor
+## resource-monitor-py
 
 ### The only reason this project exists is my college graduation project. Please don't tell me anything about code quality..
 
