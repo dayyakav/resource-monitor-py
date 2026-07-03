@@ -2,13 +2,15 @@ import psutil
 import time
 import logging
 
+# Returns CPU usage in %
 def get_cpu_info():
     cpu = psutil.cpu_percent(interval=1)
     if cpu > 90:
         logging.info(f"High CPU usage: {cpu}%")
-        
+
     return f"CPU % : {cpu} %"
 
+# Returns used and total memory usage
 def get_mem_info():
     mem = psutil.virtual_memory()
     used = mem.used / (1024**3)
@@ -16,6 +18,7 @@ def get_mem_info():
 
     return f"MEMORY : {used:.1f} GiB / {total:.0f} GiB"
 
+# Returns download and upload network info in bytes
 def get_net_info():
     prev_net = psutil.net_io_counters()
 
@@ -28,19 +31,18 @@ def get_net_info():
 
     return f"NETWORK: Download : {download} B/s | Upload : {upload} B/s"
 
-
+# Returns list of processes with PID, name and CPU %
 def get_processes(count=10):
     procs = []
 
     for p in psutil.process_iter():
         procs.append((p.cpu_percent(), p.pid, p.name()))
 
-    #sort by cpu_percent
+    # Sort by cpu_percent
     procs.sort(reverse=True)
-    
+
     result = []
     for cpu, pid, name in procs[:count]:
         result.append(f"PID: {pid} - «{name}» - {cpu} %")
 
     return result
-
