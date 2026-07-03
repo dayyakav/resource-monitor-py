@@ -1,5 +1,3 @@
-Repo
-
 ## Simple Resource Monitor
 
 ### The only reason this project exists is my college graduation project. Please don't tell me anything about code quality..
@@ -7,8 +5,7 @@ Repo
 Simple CLI resource monitor written in Python using psutil.
 
 # Screenshots
-
-
+![Screenshot](screenshot.png)
 # Features
 
 Displays:
