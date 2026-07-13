@@ -3,7 +3,10 @@ import logger
 
 from utils import get_cpu_info, get_mem_info, get_net_info, get_processes
 
+os.system("cls" if os.name == "nt" else "clear")
+
 # Main loop
+
 while True:
     cpu_info = get_cpu_info()
     mem_info = get_mem_info()
