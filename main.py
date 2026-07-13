@@ -13,8 +13,8 @@ while True:
         # Configurable process count
         processes = get_processes(count=7)
 
-        # If os is windows or linux - clear terminal
-        os.system("cls" if os.name == "nt" else "clear")
+        # Clear terminal
+        print("\033c", end="")
 
         # Displayed info
         rich.print(cpu_info)
