@@ -24,6 +24,6 @@ while True:
         for item in processes:
             rich.print(item)
 
-    # I know it's bad idea
+    # I know it's a bad idea
     except Exception as e:
         logging.error(e)
